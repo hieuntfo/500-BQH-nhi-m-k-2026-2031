@@ -87,6 +87,25 @@
             display: none;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
+        @media (min-width: 1024px) {
+            .dropdown-list.multi-column {
+                width: 600px;
+                left: 0;
+                right: auto;
+                display: none; /* keep default none */
+            }
+            .dropdown-list.multi-column .dropdown-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 4px;
+                padding: 8px;
+            }
+            .dropdown-list.multi-column .dropdown-item {
+                border-bottom: none;
+                border-radius: 6px;
+                padding: 8px 12px;
+            }
+        }
         .dropdown-item {
             padding: 12px 16px;
             cursor: pointer;
@@ -277,11 +296,7 @@
     <main class="container mx-auto px-4 py-6 max-w-[1920px]">
         
         <!-- Filters Section -->
-        <div id="filterSection" class="sticky top-0 lg:top-16 z-30 bg-white/95 backdrop-blur-md py-5 mb-8 border-b border-gray-100 shadow-sm -mx-4 px-4 sm:mx-0 sm:px-0 transition-all duration-300">
-            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-3 px-1">
-                <span class="text-xs text-gray-500 italic">* Danh sách sắp xếp theo ABC</span>
-                <span class="text-xs text-gray-500 italic">Dữ liệu cập nhật đến 15/3/2026</span>
-            </div>
+        <div id="filterSection" class="sticky top-0 lg:top-16 z-30 bg-white/95 backdrop-blur-md py-5 border-b border-gray-100 shadow-sm -mx-4 px-4 sm:mx-0 sm:px-0 transition-all duration-300">
             <div class="flex flex-col lg:flex-row lg:items-center gap-5">
                 <!-- Search and Basic Controls Row -->
                 <div class="flex items-center gap-3 flex-1">
@@ -301,7 +316,7 @@
         <!-- Filters Row (Desktop: same row as search, Mobile: collapsible) -->
                 <div id="collapsibleFilters" class="hidden lg:flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center gap-4 lg:gap-3 w-full lg:w-auto">
                     <!-- Filter: Quê quán (Searchable) -->
-                    <div class="searchable-dropdown w-full lg:w-44">
+                    <div class="searchable-dropdown w-full lg:w-44 relative">
                         <input type="text" id="provinceSearchInput" placeholder="Quê quán" 
                             class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-base sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 bg-white transition-all">
                         <div id="provinceDropdown" class="dropdown-list modal-scroll">
@@ -359,6 +374,11 @@
             </div>
 
             <!-- Result Count (Removed) -->
+        </div>
+
+        <div class="flex justify-between items-center mb-6 mt-2 px-1">
+            <span class="text-xs text-gray-500 italic">Dữ liệu cập nhật đến 15/3/2026</span>
+            <span class="text-xs text-gray-500 italic">* Danh sách sắp xếp theo ABC</span>
         </div>
 
         <div class="flex flex-col lg:flex-row gap-8">
@@ -782,6 +802,9 @@
             const isSearching = provinceSearchInput.value.length > 0;
             const listToRender = isSearching ? list : otherProvinces;
 
+            const gridContainer = document.createElement('div');
+            gridContainer.className = 'dropdown-grid';
+
             listToRender.forEach(p => {
                 const item = document.createElement('div');
                 item.className = 'dropdown-item';
@@ -793,8 +816,17 @@
                     searchInput.value = '';
                     applyFilters();
                 };
-                provinceDropdown.appendChild(item);
+                gridContainer.appendChild(item);
             });
+            
+            provinceDropdown.appendChild(gridContainer);
+            
+            // Add multi-column class if not searching and we have many items
+            if (!isSearching && listToRender.length > 10) {
+                provinceDropdown.classList.add('multi-column');
+            } else {
+                provinceDropdown.classList.remove('multi-column');
+            }
         }
 
         provinceSearchInput.addEventListener('focus', () => {
