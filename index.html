@@ -156,6 +156,7 @@
             color: #111827;
             padding-left: 8px;
             font-weight: 700;
+            white-space: nowrap;
         }
         .sidebar-title {
             color: #9F224E;
@@ -863,7 +864,7 @@
             
             data.forEach((delegate, index) => {
                 const card = document.createElement('div');
-                card.className = 'delegate-card group cursor-pointer flex flex-col p-4 border border-gray-100 rounded-2xl hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 bg-white relative z-0 hover:z-10';
+                card.className = 'delegate-card group cursor-pointer flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 bg-white relative z-0 hover:z-10 overflow-hidden';
                 card.onclick = () => openModal(delegate);
                 
                 const name = delegate['Họ và tên'] || 'Chưa cập nhật';
@@ -897,10 +898,10 @@
                 }
                 
                 card.innerHTML = `
-                    <div class="image-container aspect-[3/4] overflow-hidden bg-gray-100 mb-4 border border-gray-100 relative rounded-xl">
+                    <div class="image-container aspect-square overflow-hidden bg-gray-100 relative">
                         ${imgHtml}
                     </div>
-                    <div class="info-container flex flex-col px-1">
+                    <div class="info-container flex flex-col p-4 pt-3">
                         <h3 class="font-bold text-[16px] text-gray-900 leading-tight mb-2 group-hover:text-primary transition-colors line-clamp-2">${name}</h3>
                         <p class="text-[13px] text-gray-500 line-clamp-3 leading-relaxed">${position}</p>
                     </div>
@@ -945,9 +946,11 @@
 
             drawChart('ageChartContainer', ageStats, data.length, 'age');
             
-            // Filter out 0 values for Edu
+            // Filter out 0 values for Edu and sort by value descending
             const filteredEduStats = Object.fromEntries(
-                Object.entries(eduStats).filter(([_, val]) => val > 0)
+                Object.entries(eduStats)
+                    .filter(([_, val]) => val > 0)
+                    .sort(([,a],[,b]) => b - a)
             );
             drawChart('eduChartContainer', filteredEduStats, data.length, 'edu');
             
