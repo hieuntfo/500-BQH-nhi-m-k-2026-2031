@@ -709,8 +709,17 @@
                 else if (degree.includes('bác sĩ')) eduLevel = 'Bác sĩ';
                 delegate._eduLevel = eduLevel;
 
+                // Extract first name (Tên) for sorting
+                const fullName = delegate['Họ và tên'] || '';
+                const nameParts = fullName.trim().split(' ');
+                delegate._firstName = nameParts.length > 0 ? nameParts[nameParts.length - 1] : '';
+
                 delegatesData.push(delegate);
             }
+            
+            // Sort data by first name (Tên) alphabetically
+            delegatesData.sort((a, b) => a._firstName.localeCompare(b._firstName, 'vi'));
+            
             filteredData = [...delegatesData];
         }
 
