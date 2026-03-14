@@ -604,6 +604,14 @@
             return '#FDF2F8'; // Light Pink
         }
 
+        function removeAccents(str) {
+            if (!str) return '';
+            return str.normalize('NFD')
+                      .replace(/[\u0300-\u036f]/g, '')
+                      .replace(/đ/g, 'd')
+                      .replace(/Đ/g, 'D');
+        }
+
         // DOM Elements
         const grid = document.getElementById('delegatesGrid');
         const loadingState = document.getElementById('loadingState');
@@ -787,8 +795,6 @@
                         e.stopPropagation();
                         provinceSearchInput.value = city;
                         provinceDropdown.style.display = 'none';
-                        // Clear name search when filter is selected
-                        searchInput.value = '';
                         applyFilters();
                     };
                     priorityContainer.appendChild(btn);
@@ -823,8 +829,6 @@
                 item.onclick = () => {
                     provinceSearchInput.value = p;
                     provinceDropdown.style.display = 'none';
-                    // Clear name search when filter is selected
-                    searchInput.value = '';
                     applyFilters();
                 };
                 gridContainer.appendChild(item);
@@ -1110,8 +1114,8 @@
 
         // Filtering Logic
         function applyFilters() {
-            const searchTerm = searchInput.value.toLowerCase().trim();
-            const province = provinceSearchInput.value.trim();
+            const searchTerm = removeAccents(searchInput.value.toLowerCase().trim());
+            const province = removeAccents(provinceSearchInput.value.toLowerCase().trim());
             const gender = genderFilter.value;
             const ageGroup = ageFilter.value;
             const edu = eduFilter.value;
@@ -1119,10 +1123,12 @@
             
             filteredData = delegatesData.filter(d => {
                 // Search
-                const matchSearch = !searchTerm || (d['Họ và tên'] && d['Họ và tên'].toLowerCase().includes(searchTerm));
+                const fullName = removeAccents((d['Họ và tên'] || '').toLowerCase());
+                const matchSearch = !searchTerm || fullName.includes(searchTerm);
                 
                 // Province (Quê quán)
-                const matchProvince = !province || (d['Quê quán'] && d['Quê quán'].toLowerCase().includes(province.toLowerCase()));
+                const provinceData = removeAccents((d['Quê quán'] || '').toLowerCase());
+                const matchProvince = !province || provinceData.includes(province);
                 
                 // Workplace (Nơi ứng cử / Đoàn ĐBQH)
                 const matchWorkplace = !workplace || d['Quê'] === workplace;
@@ -1155,10 +1161,6 @@
 
         // Event Listeners for Filters
         const handleFilterChange = (e) => {
-            // If a filter is changed, clear the name search as requested
-            if (e.target !== searchInput) {
-                searchInput.value = '';
-            }
             applyFilters();
         };
 
