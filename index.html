@@ -281,7 +281,7 @@
                 </div>
 
         <!-- Filters Row (Desktop: same row as search, Mobile: collapsible) -->
-                <div id="collapsibleFilters" class="flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center gap-2 sm:gap-3 w-full xl:w-auto">
+                <div id="collapsibleFilters" class="hidden lg:flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center gap-2 sm:gap-3 w-full xl:w-auto">
                     <!-- Filter: Quê quán (Searchable) -->
                     <div class="searchable-dropdown w-full lg:w-44 relative">
                         <input type="text" id="provinceSearchInput" placeholder="Quê quán" 
@@ -335,7 +335,7 @@
             <!-- Mobile Toggle Filters Button -->
             <div class="lg:hidden mt-4 flex justify-center">
                 <button id="toggleFiltersBtn" class="flex items-center gap-2 text-primary font-medium text-sm">
-                    <span id="toggleText">Mở rộng bộ lọc</span>
+                    <span id="toggleText">Mở rộng</span>
                     <svg id="toggleIcon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
             </div>
