@@ -222,101 +222,66 @@
     <!-- Header -->
     <header id="mainHeader" class="border-b border-gray-200 bg-white sticky top-0 z-40 py-2 transition-transform duration-300">
         <div class="container mx-auto px-4 max-w-[1920px]">
-            <!-- Desktop Header (One row) -->
-            <div class="hidden lg:flex items-center justify-between relative h-12">
+            <!-- Desktop Header -->
+            <div class="hidden lg:flex items-center justify-between relative h-10">
                 <div class="flex items-center gap-3">
                     <a href="https://vnexpress.net/" target="_blank" class="flex items-center">
-                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v863/v2_2019/pc/graphics/logo.svg" alt="VnExpress" class="h-6">
+                        <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v863/v2_2019/pc/graphics/logo.svg" alt="VnExpress" class="h-5">
                     </a>
                     <span class="text-gray-300">|</span>
                     <a href="http://vnexpress.net/thoi-su/bau-cu-dai-bieu-quoc-hoi-khoa-16" target="_blank" class="text-sm font-bold text-gray-700 hover:text-primary transition-colors">
                         Bầu cử Đại biểu Quốc hội khóa XVI
                     </a>
                 </div>
-                
-                <div class="absolute left-1/2 -translate-x-1/2 text-center">
-                    <h1 class="text-xl font-bold text-primary font-serif leading-tight">
-                        <a href="/" class="hover:opacity-80 transition-opacity">Danh sách 500 đại biểu Quốc hội khóa XVI</a>
-                    </h1>
-                </div>
-                
-                <div class="flex flex-col items-end gap-1">
-                    <span class="text-[11px] text-gray-500 leading-none">Chia sẻ:</span>
-                    <div class="flex items-center gap-2">
-                        <button class="text-gray-400 hover:text-primary transition-colors" title="Chia sẻ Facebook">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </button>
-                        <button id="desktopCopyBtn" class="text-gray-400 hover:text-primary transition-colors" title="Sao chép liên kết">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                        </button>
-                    </div>
-                </div>
             </div>
 
-            <!-- Mobile Header (Two rows) -->
+            <!-- Mobile Header -->
             <div class="lg:hidden">
-                <!-- Row 1: Logo and Share -->
-                <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
                         <a href="https://vnexpress.net/" target="_blank" class="flex items-center">
-                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v863/v2_2019/pc/graphics/logo.svg" alt="VnExpress" class="h-5">
+                            <img src="https://s1.vnecdn.net/vnexpress/restruct/i/v863/v2_2019/pc/graphics/logo.svg" alt="VnExpress" class="h-4">
                         </a>
                         <span class="text-gray-300 text-xs">|</span>
                         <a href="http://vnexpress.net/thoi-su/bau-cu-dai-bieu-quoc-hoi-khoa-16" target="_blank" class="text-[11px] font-bold text-gray-700 hover:text-primary transition-colors tracking-tight">
                             Bầu cử Đại biểu Quốc hội khóa XVI
                         </a>
                     </div>
-                    
-                    <div class="flex flex-col items-end gap-1">
-                        <span class="text-[10px] text-gray-500 leading-none">Chia sẻ:</span>
-                        <div class="flex items-center gap-2">
-                            <button class="text-gray-400 hover:text-primary transition-colors" title="Chia sẻ Facebook">
-                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                            </button>
-                            <button id="headerShareBtn" class="text-gray-400 hover:text-primary transition-colors" title="Sao chép liên kết">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                            </button>
-                        </div>
+                    <div class="flex items-center gap-2">
+                        <button id="headerShareBtn" class="text-gray-400 hover:text-primary transition-colors" title="Chia sẻ">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                        </button>
                     </div>
-                </div>
-                
-                <!-- Row 2: Title -->
-                <div class="text-center">
-                    <h1 class="text-lg font-bold text-primary font-serif leading-tight">
-                        <a href="/" class="hover:opacity-80 transition-opacity">
-                            <span class="block">Danh sách 500 đại biểu Quốc hội</span>
-                            <span class="block">khóa XVI</span>
-                        </a>
-                    </h1>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-6 max-w-[1920px]">
+    <main class="container mx-auto px-4 pt-4 pb-6 lg:py-6 max-w-[1920px] mb-16 lg:mb-0">
+        
+        <!-- Page Title -->
+        <div class="mb-2 lg:mb-4">
+            <h1 class="text-2xl lg:text-3xl font-bold text-primary font-serif leading-tight">
+                <a href="/" class="hover:opacity-80 transition-opacity">Danh sách 500 đại biểu Quốc hội khóa XVI</a>
+            </h1>
+        </div>
         
         <!-- Filters Section -->
-        <div id="filterSection" class="sticky top-0 lg:top-16 z-30 bg-white/95 backdrop-blur-md py-5 border-b border-gray-100 shadow-sm -mx-4 px-4 sm:mx-0 sm:px-0 transition-all duration-300">
-            <div class="flex flex-col xl:flex-row xl:items-center gap-5">
+        <div id="filterSection" class="sticky top-0 lg:top-16 z-30 bg-white/95 backdrop-blur-md py-3 lg:py-4 border-b border-gray-100 shadow-sm -mx-4 px-4 sm:mx-0 sm:px-0 transition-all duration-300">
+            <div class="flex flex-col xl:flex-row xl:items-center gap-5 justify-start">
                 <!-- Search and Basic Controls Row -->
-                <div class="flex items-center gap-3 flex-1">
+                <div class="flex items-center gap-3 flex-1 xl:flex-none">
                     <!-- Search -->
                     <div class="relative flex-1 lg:max-w-sm">
                         <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên đại biểu..." 
-                            class="w-full px-5 py-2.5 border border-gray-200 rounded-xl text-base sm:text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all">
+                            class="w-full px-5 py-2.5 pr-12 border border-gray-200 rounded-xl text-base focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all">
                         <svg class="w-4 h-4 absolute right-4 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
-
-                    <!-- Chart Button (Mobile & Tablet) -->
-                    <button id="chartScrollBtn" class="xl:hidden h-11 px-4 flex items-center justify-center gap-2 bg-[#57A64A] text-white rounded-xl hover:bg-opacity-90 transition-all shadow-sm">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        <span class="text-sm font-bold tracking-wide">Thống kê</span>
-                    </button>
                 </div>
 
         <!-- Filters Row (Desktop: same row as search, Mobile: collapsible) -->
-                <div id="collapsibleFilters" class="hidden lg:flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center gap-4 lg:gap-3 w-full xl:w-auto">
+                <div id="collapsibleFilters" class="flex flex-col lg:flex-row flex-wrap items-stretch lg:items-center gap-2 sm:gap-3 w-full xl:w-auto">
                     <!-- Filter: Quê quán (Searchable) -->
                     <div class="searchable-dropdown w-full lg:w-44 relative">
                         <input type="text" id="provinceSearchInput" placeholder="Quê quán" 
@@ -378,78 +343,99 @@
             <!-- Result Count (Removed) -->
         </div>
 
-        <div class="flex justify-between items-center mb-6 mt-2 px-1">
-            <span class="text-xs text-gray-500 italic">Dữ liệu cập nhật đến 15/3/2026</span>
-            <span class="text-xs text-gray-500 italic">* Danh sách sắp xếp theo ABC</span>
-        </div>
+        <div class="flex flex-col lg:flex-row gap-8 mt-6">
+            <!-- Left Sidebar (Desktop) -->
+            <aside class="hidden md:block w-full md:w-[200px] lg:w-[250px] flex-shrink-0 md:border-r md:border-gray-200 md:pr-4 lg:pr-6 sticky top-40 self-start max-h-[calc(100vh-10rem)] overflow-y-auto modal-scroll pb-4">
+                <!-- Tabs -->
+                <div class="flex flex-col gap-2 mb-8">
+                    <button id="tabListDesktop" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-red-50 text-primary font-bold w-full text-left transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+                        Danh sách
+                    </button>
+                    <button id="tabStatsDesktop" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 font-medium w-full text-left transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Thống kê
+                    </button>
+                </div>
 
-        <div class="flex flex-col lg:flex-row gap-8">
-            <!-- Sidebar Charts Modal for Mobile / Sidebar for Desktop -->
-            <div id="chartModal" class="fixed inset-0 z-50 hidden xl:hidden">
-                <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="closeChartModalOverlay"></div>
-                <div class="absolute inset-x-0 bottom-0 bg-white rounded-t-2xl max-h-[90vh] overflow-y-auto p-6 modal-scroll">
-                    <div class="flex justify-between items-center mb-6 border-b border-gray-100 pb-4">
-                        <div class="flex items-center gap-3">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                            <h2 class="text-xl font-bold text-primary tracking-wide font-arial">Thống kê</h2>
-                        </div>
-                        <button id="closeChartModalBtn" class="text-gray-400 hover:text-gray-600">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <!-- Metadata -->
+                <div class="text-sm text-gray-500 mb-6">
+                    <p class="mb-2">Hiển thị <strong id="resultCountDesktop" class="text-gray-800">0</strong> kết quả</p>
+                    <p class="mb-1">Dữ liệu cập nhật đến 15/3/2026</p>
+                    <p class="italic text-[11px]">* Danh sách sắp xếp theo ABC</p>
+                </div>
+
+                <!-- Share -->
+                <div>
+                    <p class="text-[11px] text-gray-500 mb-2">Chia sẻ:</p>
+                    <div class="flex gap-3">
+                        <button class="text-gray-400 hover:text-primary transition-colors" title="Chia sẻ Facebook">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </button>
-                    </div>
-                    <div id="mobileChartContent"></div>
-                </div>
-            </div>
-
-            <!-- Sidebar Charts (Desktop only: xl+) -->
-            <aside id="sidebarCharts" class="hidden xl:block w-full xl:w-[350px] flex-shrink-0 xl:border-r xl:border-gray-200 xl:pr-6 sticky top-40 self-start max-h-[calc(100vh-10rem)] overflow-y-auto modal-scroll pb-4">
-                <div class="sidebar-title font-arial">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                    Thống kê
-                </div>
-                <div id="desktopChartContent">
-                    <!-- Age Chart -->
-                    <div class="mb-8">
-                        <h3 class="font-bold text-gray-800 mb-4">Độ tuổi</h3>
-                        <div id="ageChartContainer" class="flex flex-col gap-2 relative"></div>
-                    </div>
-
-                    <!-- Education Chart -->
-                    <div class="mb-8">
-                        <h3 class="font-bold text-gray-800 mb-4">Trình độ chuyên môn</h3>
-                        <div id="eduChartContainer" class="flex flex-col gap-2 relative"></div>
-                    </div>
-
-                    <!-- Gender Chart -->
-                    <div class="mb-8">
-                        <h3 class="font-bold text-gray-800 mb-4">Giới tính</h3>
-                        <div id="genderChartContainer" class="flex flex-col gap-2 relative"></div>
-                    </div>
-
-                    <!-- Hometown Chart -->
-                    <div class="mb-8">
-                        <h3 class="font-bold text-gray-800 mb-4">Quê quán</h3>
-                        <div id="hometownChartContainer" class="flex flex-col gap-2 relative"></div>
+                        <button id="desktopCopyBtn" class="text-gray-400 hover:text-primary transition-colors" title="Sao chép liên kết">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                        </button>
                     </div>
                 </div>
             </aside>
 
-            <!-- Main Grid -->
-            <div class="flex-1">
-                <!-- Loading State -->
-                <div id="loadingState" class="py-12 flex flex-col items-center justify-center">
-                    <div class="loader mb-4"></div>
-                    <p class="text-gray-500">Đang tải dữ liệu...</p>
+            <!-- Right Content -->
+            <div class="flex-1 min-w-0">
+                <!-- Mobile Metadata -->
+                <div class="md:hidden flex justify-between items-center mb-4 text-sm text-gray-500 px-1">
+                    <span>Hiển thị <strong id="resultCountMobile" class="text-gray-800">0</strong> kết quả</span>
+                </div>
+                <div class="md:hidden flex justify-between items-center mb-6 px-1">
+                    <span class="text-xs text-gray-500 italic">Dữ liệu cập nhật đến 15/3/2026</span>
+                    <span class="text-xs text-gray-500 italic">* Danh sách sắp xếp theo ABC</span>
                 </div>
 
-                <!-- Grid -->
-                <div id="delegatesGrid" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 gap-x-4 gap-y-4 sm:gap-y-8 hidden">
-                    <!-- Cards will be injected here -->
+                <!-- List View -->
+                <div id="listView">
+                    <!-- Loading State -->
+                    <div id="loadingState" class="py-12 flex flex-col items-center justify-center">
+                        <div class="loader mb-4"></div>
+                        <p class="text-gray-500">Đang tải dữ liệu...</p>
+                    </div>
+
+                    <!-- Grid -->
+                    <div id="delegatesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-x-4 gap-y-4 sm:gap-y-8 hidden">
+                        <!-- Cards will be injected here -->
+                    </div>
+
+                    <!-- No Results -->
+                    <div id="noResults" class="hidden py-12 text-center">
+                        <p class="text-gray-500 text-lg">Không tìm thấy đại biểu nào phù hợp.</p>
+                    </div>
                 </div>
 
-                <!-- No Results -->
-                <div id="noResults" class="hidden py-12 text-center">
-                    <p class="text-gray-500 text-lg">Không tìm thấy đại biểu nào phù hợp.</p>
+                <!-- Stats View -->
+                <div id="statsView" class="hidden">
+                    <div id="desktopChartContent" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Age Chart -->
+                        <div class="mb-8">
+                            <h3 class="font-bold text-gray-800 mb-4">Độ tuổi</h3>
+                            <div id="ageChartContainer" class="flex flex-col gap-2 relative"></div>
+                        </div>
+
+                        <!-- Education Chart -->
+                        <div class="mb-8">
+                            <h3 class="font-bold text-gray-800 mb-4">Trình độ chuyên môn</h3>
+                            <div id="eduChartContainer" class="flex flex-col gap-2 relative"></div>
+                        </div>
+
+                        <!-- Gender Chart -->
+                        <div class="mb-8">
+                            <h3 class="font-bold text-gray-800 mb-4">Giới tính</h3>
+                            <div id="genderChartContainer" class="flex flex-col gap-2 relative"></div>
+                        </div>
+
+                        <!-- Hometown Chart -->
+                        <div class="mb-8">
+                            <h3 class="font-bold text-gray-800 mb-4">Quê quán</h3>
+                            <div id="hometownChartContainer" class="flex flex-col gap-2 relative"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -463,8 +449,20 @@
         </div>
     </footer>
 
+    <!-- Mobile Bottom Bar -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 flex shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] pb-safe">
+        <button id="tabListMobile" class="flex-1 flex flex-col items-center justify-center py-2 text-primary">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
+            <span class="text-[11px] font-medium">Danh sách</span>
+        </button>
+        <button id="tabStatsMobile" class="flex-1 flex flex-col items-center justify-center py-2 text-gray-400 hover:text-gray-600">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <span class="text-[11px] font-medium">Thống kê</span>
+        </button>
+    </div>
+
     <!-- Back to Top Button -->
-    <button id="backToTopBtn" class="fixed bottom-8 right-8 z-40 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-accent focus:outline-none translate-y-10">
+    <button id="backToTopBtn" class="fixed bottom-24 right-4 sm:bottom-8 sm:right-8 z-40 bg-primary text-white p-3 rounded-full shadow-lg opacity-60 invisible transition-all duration-300 hover:bg-accent focus:outline-none translate-y-10">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
     </button>
 
@@ -478,8 +476,8 @@
                     <!-- Avatar hidden on mobile sticky header, visible in body or handled differently -->
                     <div id="modalAvatarContainer" class="hidden sm:block"></div>
                     <div class="hidden sm:block">
-                        <h2 id="modalName" class="text-2xl font-bold name-heading mb-1 leading-tight">Tên Đại Biểu</h2>
-                        <p id="modalPosition" class="text-[15px] text-gray-600 font-medium">Chức vụ</p>
+                        <h2 id="modalName" class="text-xl font-bold name-heading mb-1 leading-tight">Tên Đại Biểu</h2>
+                        <p id="modalPosition" class="text-sm text-gray-600 font-medium">Chức vụ</p>
                     </div>
                     <!-- Mobile only title (simplified) -->
                     <div class="sm:hidden">
@@ -496,73 +494,73 @@
                 <!-- Mobile Avatar & Name Section (Visible only on mobile inside body) -->
                 <div class="sm:hidden flex flex-col items-center text-center mb-6">
                     <div id="modalAvatarMobile" class="mb-3"></div>
-                    <h2 id="modalNameMobile" class="text-2xl font-bold name-heading mb-1 leading-tight"></h2>
+                    <h2 id="modalNameMobile" class="text-xl font-bold name-heading mb-1 leading-tight"></h2>
                     <p id="modalPositionMobile" class="text-sm text-gray-600 font-medium"></p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-10">
                     
                     <div class="col-span-1 md:col-span-2 mb-1">
-                        <h3 class="text-xl font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Thông tin cơ bản</h3>
+                        <h3 class="text-lg font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Thông tin cơ bản</h3>
                     </div>
 
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Ngày sinh</p>
-                        <p id="modalDob" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalDob" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Giới tính</p>
-                        <p id="modalGender" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalGender" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Dân tộc / Tôn giáo</p>
-                        <p id="modalEthnicity" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalEthnicity" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Quê quán</p>
-                        <p id="modalHometown" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalHometown" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     
                     <div class="col-span-1 md:col-span-2 mt-4 mb-1">
-                        <h3 class="text-xl font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Trình độ & Chuyên môn</h3>
+                        <h3 class="text-lg font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Trình độ & Chuyên môn</h3>
                     </div>
 
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Giáo dục phổ thông</p>
-                        <p id="modalEdu" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalEdu" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Học hàm, học vị</p>
-                        <p id="modalDegree" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalDegree" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div class="col-span-1 md:col-span-2">
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Chuyên môn, nghiệp vụ</p>
-                        <p id="modalMajor" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalMajor" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div class="col-span-1 md:col-span-2">
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Lý luận chính trị</p>
-                        <p id="modalPolitical" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalPolitical" class="font-medium text-gray-900 text-base">-</p>
                     </div>
 
                     <div class="col-span-1 md:col-span-2 mt-4 mb-1">
-                        <h3 class="text-xl font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Công tác & Chức vụ</h3>
+                        <h3 class="text-lg font-bold border-b border-gray-100 pb-2 mb-4 text-heading uppercase text-primary">Công tác & Chức vụ</h3>
                     </div>
 
                     <div class="col-span-1 md:col-span-2">
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Nơi công tác</p>
-                        <p id="modalWorkplace" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalWorkplace" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div class="col-span-1 md:col-span-2">
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Đoàn ĐBQH</p>
-                        <p id="modalProvince" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalProvince" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Ngày vào Đảng</p>
-                        <p id="modalPartyDate" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalPartyDate" class="font-medium text-gray-900 text-base">-</p>
                     </div>
                     <div>
                         <p class="text-[11px] text-gray-400 uppercase tracking-wider mb-1 font-bold">Đại biểu QH các khóa</p>
-                        <p id="modalNA" class="font-medium text-gray-900 text-lg">-</p>
+                        <p id="modalNA" class="font-medium text-gray-900 text-base">-</p>
                     </div>
 
                 </div>
@@ -577,12 +575,12 @@
     </div>
 
     <!-- Hint Toast -->
-    <div id="hintToast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[60] bg-white border border-gray-200 shadow-2xl rounded-full px-6 py-3 flex items-center gap-3 transition-all duration-700 opacity-0 translate-y-8 pointer-events-none">
-        <div class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white">
+    <div id="hintToast" class="fixed bottom-20 sm:bottom-8 left-1/2 -translate-x-1/2 z-[60] bg-white border border-gray-200 shadow-2xl rounded-full px-5 py-2.5 sm:px-6 sm:py-3 flex items-center gap-3 transition-all duration-500 opacity-0 translate-y-8 pointer-events-none max-w-[90vw]">
+        <div id="hintToastIcon" class="w-6 h-6 rounded-full bg-primary flex items-center justify-center text-white shrink-0">
             <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
         </div>
-        <span class="text-sm font-medium text-gray-800 whitespace-nowrap">Bấm vào ảnh để xem thông tin chi tiết</span>
-        <button onclick="this.parentElement.classList.add('opacity-0', 'translate-y-8')" class="text-gray-400 hover:text-gray-600 ml-1">
+        <span id="hintToastText" class="text-sm font-medium text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis">Bấm vào ảnh để xem thông tin chi tiết</span>
+        <button onclick="this.parentElement.classList.add('opacity-0', 'translate-y-8')" class="text-gray-400 hover:text-gray-600 ml-1 shrink-0 pointer-events-auto">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
     </div>
@@ -628,22 +626,24 @@
         const resetFiltersBtn = document.getElementById('resetFiltersBtn');
         const shareBtn = document.getElementById('shareBtn');
         const headerShareBtn = document.getElementById('headerShareBtn');
-        const desktopShareBtn = document.getElementById('desktopShareBtn');
         const desktopCopyBtn = document.getElementById('desktopCopyBtn');
         const facebookBtns = document.querySelectorAll('button[title="Chia sẻ Facebook"]');
-        const chartScrollBtn = document.getElementById('chartScrollBtn');
         const toggleFiltersBtn = document.getElementById('toggleFiltersBtn');
         const collapsibleFilters = document.getElementById('collapsibleFilters');
         const toggleText = document.getElementById('toggleText');
         const toggleIcon = document.getElementById('toggleIcon');
-        const sidebarCharts = document.getElementById('sidebarCharts');
-        const chartModal = document.getElementById('chartModal');
-        const closeChartModalBtn = document.getElementById('closeChartModalBtn');
-        const closeChartModalOverlay = document.getElementById('closeChartModalOverlay');
-        const mobileChartContent = document.getElementById('mobileChartContent');
-        const desktopChartContent = document.getElementById('desktopChartContent');
         const mainHeader = document.getElementById('mainHeader');
         const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Tabs & Views
+        const tabListDesktop = document.getElementById('tabListDesktop');
+        const tabStatsDesktop = document.getElementById('tabStatsDesktop');
+        const tabListMobile = document.getElementById('tabListMobile');
+        const tabStatsMobile = document.getElementById('tabStatsMobile');
+        const listView = document.getElementById('listView');
+        const statsView = document.getElementById('statsView');
+        const resultCountDesktop = document.getElementById('resultCountDesktop');
+        const resultCountMobile = document.getElementById('resultCountMobile');
 
         let allProvinces = [];
 
@@ -655,18 +655,92 @@
         const modalNameMobile = document.getElementById('modalNameMobile');
         const modalPositionMobile = document.getElementById('modalPositionMobile');
 
+        // Tab Switching Logic
+        function switchTab(tab) {
+            if (tab === 'list') {
+                // Desktop Tabs
+                tabListDesktop.classList.replace('text-gray-600', 'text-primary');
+                tabListDesktop.classList.replace('hover:bg-gray-50', 'bg-red-50');
+                tabListDesktop.classList.add('font-bold');
+                tabListDesktop.classList.remove('font-medium');
+                
+                tabStatsDesktop.classList.replace('text-primary', 'text-gray-600');
+                tabStatsDesktop.classList.replace('bg-red-50', 'hover:bg-gray-50');
+                tabStatsDesktop.classList.add('font-medium');
+                tabStatsDesktop.classList.remove('font-bold');
+
+                // Mobile Tabs
+                tabListMobile.classList.add('text-primary');
+                tabListMobile.classList.remove('text-gray-400', 'hover:text-gray-600');
+                
+                tabStatsMobile.classList.add('text-gray-400', 'hover:text-gray-600');
+                tabStatsMobile.classList.remove('text-primary');
+
+                // Views
+                listView.classList.remove('hidden');
+                statsView.classList.add('hidden');
+            } else {
+                // Desktop Tabs
+                tabStatsDesktop.classList.replace('text-gray-600', 'text-primary');
+                tabStatsDesktop.classList.replace('hover:bg-gray-50', 'bg-red-50');
+                tabStatsDesktop.classList.add('font-bold');
+                tabStatsDesktop.classList.remove('font-medium');
+                
+                tabListDesktop.classList.replace('text-primary', 'text-gray-600');
+                tabListDesktop.classList.replace('bg-red-50', 'hover:bg-gray-50');
+                tabListDesktop.classList.add('font-medium');
+                tabListDesktop.classList.remove('font-bold');
+
+                // Mobile Tabs
+                tabStatsMobile.classList.add('text-primary');
+                tabStatsMobile.classList.remove('text-gray-400', 'hover:text-gray-600');
+                
+                tabListMobile.classList.add('text-gray-400', 'hover:text-gray-600');
+                tabListMobile.classList.remove('text-primary');
+
+                // Views
+                statsView.classList.remove('hidden');
+                listView.classList.add('hidden');
+            }
+        }
+
+        tabListDesktop.addEventListener('click', () => switchTab('list'));
+        tabStatsDesktop.addEventListener('click', () => switchTab('stats'));
+        tabListMobile.addEventListener('click', () => switchTab('list'));
+        tabStatsMobile.addEventListener('click', () => switchTab('stats'));
+
         // Hint Toast Logic
         function showHintToast() {
             const hintToast = document.getElementById('hintToast');
-            if (hintToast) {
+            const hintToastText = document.getElementById('hintToastText');
+            const hintToastIcon = document.getElementById('hintToastIcon');
+            
+            if (hintToast && hintToastText && hintToastIcon) {
+                // Step 1: Show first message
                 setTimeout(() => {
-                    hintToast.classList.remove('opacity-0', 'translate-y-8', 'pointer-events-none');
+                    hintToast.classList.remove('opacity-0', 'translate-y-8');
                 }, 1500);
                 
+                // Step 2: Hide after 4 seconds, change text, show again
                 setTimeout(() => {
-                    hintToast.classList.add('opacity-0', 'translate-y-8', 'pointer-events-none');
-                    setTimeout(() => hintToast.remove(), 1000);
-                }, 11500);
+                    hintToast.classList.add('opacity-0', 'translate-y-8');
+                    
+                    setTimeout(() => {
+                        // Change to second message
+                        hintToastText.textContent = 'Cuộn để xem thêm';
+                        hintToastIcon.innerHTML = '<svg class="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>';
+                        
+                        // Show again
+                        hintToast.classList.remove('opacity-0', 'translate-y-8');
+                        
+                        // Final hide after 4 seconds
+                        setTimeout(() => {
+                            hintToast.classList.add('opacity-0', 'translate-y-8');
+                            setTimeout(() => hintToast.remove(), 500); // Remove from DOM after transition
+                        }, 4000);
+                        
+                    }, 500); // Wait for fade out transition
+                }, 5500); // 1500ms initial delay + 4000ms display time
             }
         }
 
@@ -725,8 +799,12 @@
                 delegatesData.push(delegate);
             }
             
-            // Sort data by first name (Tên) alphabetically
-            delegatesData.sort((a, b) => a._firstName.localeCompare(b._firstName, 'vi'));
+            // Sort data by first name (Tên) alphabetically, then by full name
+            delegatesData.sort((a, b) => {
+                const nameCompare = a._firstName.localeCompare(b._firstName, 'vi');
+                if (nameCompare !== 0) return nameCompare;
+                return (a['Họ và tên'] || '').localeCompare(b['Họ và tên'] || '', 'vi');
+            });
             
             filteredData = [...delegatesData];
         }
@@ -779,7 +857,7 @@
             provinceDropdown.innerHTML = '';
             
             // Priority Cities
-            const priorityCities = ['Hà Nội', 'TP HCM'];
+            const priorityCities = ['Hà Nội', 'TP. Hồ Chí Minh', 'TP HCM'];
             const otherProvinces = list.filter(p => !priorityCities.includes(p));
             
             // Render Priority Buttons
@@ -878,7 +956,7 @@
             
             data.forEach((delegate, index) => {
                 const card = document.createElement('div');
-                card.className = 'delegate-card group cursor-pointer flex flex-col border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 bg-white relative z-0 hover:z-10 overflow-hidden';
+                card.className = 'delegate-card group cursor-pointer flex flex-row sm:flex-col border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 bg-white relative z-0 hover:z-10 overflow-hidden';
                 card.onclick = () => openModal(delegate);
                 
                 const name = delegate['Họ và tên'] || 'Chưa cập nhật';
@@ -912,12 +990,12 @@
                 }
                 
                 card.innerHTML = `
-                    <div class="image-container aspect-square overflow-hidden bg-gray-100 relative">
+                    <div class="image-container w-[110px] sm:w-full aspect-square overflow-hidden bg-gray-100 relative shrink-0">
                         ${imgHtml}
                     </div>
-                    <div class="info-container flex flex-col p-4 pt-3">
-                        <h3 class="font-bold text-[16px] text-gray-900 leading-tight mb-2 group-hover:text-primary transition-colors line-clamp-2">${name}</h3>
-                        <p class="text-[13px] text-gray-500 line-clamp-3 leading-relaxed">${position}</p>
+                    <div class="info-container flex flex-col p-4 sm:pt-3 flex-1 justify-center sm:justify-start">
+                        <h3 class="font-bold text-[16px] text-gray-900 leading-tight mb-1.5 sm:mb-2 group-hover:text-primary transition-colors line-clamp-2">${name}</h3>
+                        <p class="text-[13px] text-gray-500 line-clamp-4 sm:line-clamp-3 leading-relaxed">${position}</p>
                     </div>
                 `;
                 
@@ -983,7 +1061,7 @@
                 Object.entries(hometownStats)
                 .sort(([,a],[,b]) => b - a)
             );
-            drawChart('hometownChartContainer', sortedHometown, data.length, 'hometown');
+            drawChart('hometownChartContainer', sortedHometown, data.length, 'hometown', 10);
         }
 
         function toggleChartFilter(type, value) {
@@ -1017,13 +1095,11 @@
                     filterElement.value = filterValue;
                 }
                 
-                // Clear name search
-                searchInput.value = '';
                 applyFilters();
             }
         }
 
-        function drawChart(containerId, stats, total, type) {
+        function drawChart(containerId, stats, total, type, limit = null) {
             const container = document.getElementById(containerId);
             container.innerHTML = '';
             
@@ -1052,11 +1128,19 @@
             xAxis.className = 'flex justify-between text-[10px] text-gray-400 mt-3 ml-[110px] border-t border-gray-100 pt-2 font-bold';
             xAxis.innerHTML = `<span>0</span><span>${Math.round(maxVal/2)}</span><span>${maxVal}</span>`;
 
-            Object.entries(stats).forEach(([label, value]) => {
+            const entries = Object.entries(stats);
+            const shouldLimit = limit !== null && entries.length > limit;
+
+            entries.forEach(([label, value], index) => {
                 const row = document.createElement('div');
                 const isActive = label === activeLabel;
                 
                 row.className = `flex items-center mb-2 last:mb-0 cursor-pointer transition-all rounded-lg p-1 -mx-1 ${isActive ? 'bg-primary/10' : 'hover:bg-gray-50'}`;
+                
+                if (shouldLimit && index >= limit) {
+                    row.classList.add('hidden', `hidden-row-${containerId}`);
+                }
+                
                 row.onclick = () => toggleChartFilter(type, label);
                 
                 const widthPercent = (value / maxVal) * 100;
@@ -1073,6 +1157,45 @@
             });
             
             container.appendChild(xAxis);
+            
+            if (shouldLimit) {
+                const toggleBtn = document.createElement('button');
+                toggleBtn.className = 'mt-4 w-full py-2 text-sm text-primary font-medium hover:bg-primary/5 rounded-lg transition-colors flex items-center justify-center gap-2';
+                
+                const showMoreHtml = `
+                    <span>Xem thêm</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                `;
+                const showLessHtml = `
+                    <span>Thu gọn</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                `;
+                
+                toggleBtn.innerHTML = showMoreHtml;
+                let isExpanded = false;
+                
+                toggleBtn.onclick = () => {
+                    isExpanded = !isExpanded;
+                    const hiddenRows = container.querySelectorAll(`.hidden-row-${containerId}`);
+                    
+                    hiddenRows.forEach(row => {
+                        if (isExpanded) {
+                            row.classList.remove('hidden');
+                        } else {
+                            row.classList.add('hidden');
+                        }
+                    });
+                    
+                    toggleBtn.innerHTML = isExpanded ? showLessHtml : showMoreHtml;
+                    
+                    if (!isExpanded) {
+                        // Scroll back to top of container when collapsing
+                        container.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                };
+                
+                container.appendChild(toggleBtn);
+            }
         }
 
         function drawPieChart(containerId, stats, total, type) {
@@ -1157,6 +1280,9 @@
             
             renderGrid(filteredData);
             renderCharts(filteredData);
+            
+            if (resultCountDesktop) resultCountDesktop.textContent = filteredData.length;
+            if (resultCountMobile) resultCountMobile.textContent = filteredData.length;
         }
 
         // Event Listeners for Filters
@@ -1207,27 +1333,7 @@
             }
         });
 
-        // Scroll to Charts / Open Chart Modal
-        chartScrollBtn.addEventListener('click', () => {
-            if (window.innerWidth < 1280) {
-                // Move chart containers to mobile modal
-                mobileChartContent.appendChild(desktopChartContent);
-                chartModal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                sidebarCharts.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
 
-        function closeChartModal() {
-            chartModal.classList.add('hidden');
-            document.body.style.overflow = '';
-            // Move chart containers back to desktop sidebar
-            sidebarCharts.appendChild(desktopChartContent);
-        }
-
-        closeChartModalBtn.addEventListener('click', closeChartModal);
-        closeChartModalOverlay.addEventListener('click', closeChartModal);
 
         // Scroll Behavior for Mobile Header
         let lastScrollY = window.scrollY;
