@@ -965,7 +965,12 @@
                 const gender = delegate['Giới tính'];
                 
                 let imgHtml = '';
-                const avatarUrl = delegate['Avatar'] || delegate['Ảnh'];
+                let avatarUrl = '';
+                if (delegate['Hình ảnh']) {
+                    avatarUrl = `https://s1.vnecdn.net/vnexpress/j/v7248/event/longform/thoisu/500daibieuquochoikhoa16/avatar/${delegate['Hình ảnh'].trim()}`;
+                } else {
+                    avatarUrl = delegate['Avatar'] || delegate['Ảnh'];
+                }
                 
                 if (avatarUrl) {
                     imgHtml = `<img src="${avatarUrl}" alt="${name}" class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500 ease-out">`;
@@ -1408,7 +1413,12 @@
             const modalAvatarContainer = document.getElementById('modalAvatarContainer');
             const name = delegate['Họ và tên'];
             const gender = delegate['Giới tính'];
-            const avatarUrl = delegate['Avatar'] || delegate['Ảnh'];
+            let avatarUrl = '';
+            if (delegate['Hình ảnh']) {
+                avatarUrl = `https://s1.vnecdn.net/vnexpress/j/v7248/event/longform/thoisu/500daibieuquochoikhoa16/avatar/${delegate['Hình ảnh'].trim()}`;
+            } else {
+                avatarUrl = delegate['Avatar'] || delegate['Ảnh'];
+            }
             
             // Helper to generate Avatar HTML
             const getAvatarHtml = (sizeClass, textSizeClass) => {
