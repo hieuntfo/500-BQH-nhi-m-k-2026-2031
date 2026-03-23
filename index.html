@@ -324,6 +324,12 @@
                         <option value="">Nơi ứng cử</option>
                     </select>
 
+                    <!-- Stats Button -->
+                    <button id="tabStatsDesktop" class="px-5 py-2.5 bg-green-50 text-green-700 rounded-xl text-sm font-bold hover:bg-green-100 transition-all flex items-center justify-center gap-2 w-full lg:w-auto">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Cơ cấu đại biểu
+                    </button>
+
                     <!-- Reset Button -->
                     <button id="resetFiltersBtn" class="px-5 py-2.5 bg-gray-100 text-gray-600 rounded-xl text-sm font-bold hover:bg-gray-200 transition-all flex items-center justify-center gap-2 w-full lg:w-auto">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
@@ -340,47 +346,15 @@
                 </button>
             </div>
 
-            <!-- Result Count (Removed) -->
+            <!-- Result Count -->
+            <div class="mt-4 text-center text-sm text-gray-600">
+                Tổng số <strong id="resultCountDesktop" class="text-gray-900">0</strong> người trúng cử
+            </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-8 mt-6">
-            <!-- Left Sidebar (Desktop) -->
-            <aside class="hidden md:block w-full md:w-[200px] lg:w-[250px] flex-shrink-0 md:border-r md:border-gray-200 md:pr-4 lg:pr-6 sticky top-40 self-start max-h-[calc(100vh-10rem)] overflow-y-auto modal-scroll pb-4">
-                <!-- Tabs -->
-                <div class="flex flex-col gap-2 mb-8">
-                    <button id="tabListDesktop" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-red-50 text-primary font-bold w-full text-left transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path></svg>
-                        Danh sách
-                    </button>
-                    <button id="tabStatsDesktop" class="flex items-center gap-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-50 font-medium w-full text-left transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                        Thống kê
-                    </button>
-                </div>
-
-                <!-- Metadata -->
-                <div class="text-sm text-gray-500 mb-6">
-                    <p class="mb-2">Hiển thị <strong id="resultCountDesktop" class="text-gray-800">0</strong> kết quả</p>
-                    <p class="mb-1">Dữ liệu cập nhật đến 15/3/2026</p>
-                    <p class="italic text-[11px]">* Danh sách sắp xếp theo ABC</p>
-                </div>
-
-                <!-- Share -->
-                <div>
-                    <p class="text-[11px] text-gray-500 mb-2">Chia sẻ:</p>
-                    <div class="flex gap-3">
-                        <button class="text-gray-400 hover:text-primary transition-colors" title="Chia sẻ Facebook">
-                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        </button>
-                        <button id="desktopCopyBtn" class="text-gray-400 hover:text-primary transition-colors" title="Sao chép liên kết">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-                        </button>
-                    </div>
-                </div>
-            </aside>
-
-            <!-- Right Content -->
-            <div class="flex-1 min-w-0">
+        <div class="flex flex-col lg:flex-row gap-8 mt-6 relative overflow-hidden">
+            <!-- Main Content -->
+            <div id="mainContentArea" class="flex-1 min-w-0 transition-all duration-500">
                 <!-- Mobile Metadata -->
                 <div class="md:hidden flex justify-between items-center mb-4 text-sm text-gray-500 px-1">
                     <span>Hiển thị <strong id="resultCountMobile" class="text-gray-800">0</strong> kết quả</span>
@@ -438,6 +412,71 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Right Detail Panel -->
+            <aside id="detailPanel" class="fixed inset-y-0 right-0 z-50 w-full sm:w-[400px] bg-white shadow-2xl transform translate-x-full transition-all duration-500 lg:relative lg:translate-x-0 lg:z-auto lg:shadow-none lg:w-0 lg:opacity-0 lg:overflow-hidden lg:shrink-0">
+                <div class="w-full lg:w-[400px] xl:w-[450px] h-full lg:h-auto lg:pl-6 lg:border-l lg:border-gray-200 lg:sticky lg:top-40 lg:self-start lg:max-h-[calc(100vh-10rem)] overflow-y-auto modal-scroll p-6 lg:p-0 bg-white">
+                    <!-- Close button -->
+                    <div class="flex justify-between items-center mb-6 lg:mb-2">
+                        <h2 class="text-lg font-bold text-primary lg:hidden">Chi tiết đại biểu</h2>
+                        <button id="closePanelBtn" class="text-gray-400 hover:text-gray-700 p-2 transition-colors rounded-full hover:bg-gray-100 bg-gray-100 lg:bg-transparent">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Header: Info + Avatar -->
+                    <div class="flex flex-col-reverse sm:flex-row justify-between items-start gap-4 mb-6">
+                        <div class="flex-1 w-full">
+                            <h2 id="panelName" class="text-2xl font-bold text-primary font-serif mb-2">Tên Đại Biểu</h2>
+                            <p id="panelPosition" class="text-sm text-gray-700 mb-4 leading-relaxed">Chức vụ</p>
+                            
+                            <div class="space-y-1.5 text-sm">
+                                <p><span class="font-bold text-gray-900">Ngày sinh:</span> <span id="panelDob" class="text-gray-700">-</span></p>
+                                <p><span class="font-bold text-gray-900">Quê quán:</span> <span id="panelHometown" class="text-gray-700">-</span></p>
+                                <p><span class="font-bold text-gray-900">Dân tộc:</span> <span id="panelEthnicity" class="text-gray-700">-</span></p>
+                            </div>
+                        </div>
+                        <div id="panelAvatarContainer" class="w-24 h-24 sm:w-32 sm:h-32 shrink-0 self-center sm:self-start mb-4 sm:mb-0">
+                            <!-- Avatar injected here -->
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="flex justify-end items-center gap-2 mb-6 border-b border-gray-100 pb-4">
+                        <span class="text-sm text-gray-500">Chia sẻ</span>
+                        <button id="panelCopyBtn" class="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary hover:border-primary transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                        </button>
+                    </div>
+
+                    <!-- Details Table -->
+                    <div class="space-y-4 text-sm pb-8 lg:pb-0">
+                        <div class="flex flex-col sm:flex-row border-b border-gray-100 pb-4 gap-1 sm:gap-4">
+                            <div class="w-full sm:w-1/3 font-bold text-primary">Chức vụ</div>
+                            <div class="w-full sm:w-2/3 text-gray-800" id="panelDetailPosition">-</div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-gray-100 pb-4 gap-1 sm:gap-4">
+                            <div class="w-full sm:w-1/3 font-bold text-primary">Trình độ chuyên môn</div>
+                            <div class="w-full sm:w-2/3 text-gray-800" id="panelEdu">-</div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-gray-100 pb-4 gap-1 sm:gap-4">
+                            <div class="w-full sm:w-1/3 font-bold text-primary">Đơn vị ứng cử</div>
+                            <div class="w-full sm:w-2/3 text-gray-800" id="panelWorkplace">-</div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-gray-100 pb-4 gap-1 sm:gap-4">
+                            <div class="w-full sm:w-1/3 font-bold text-primary">Đại biểu Quốc hội khóa</div>
+                            <div class="w-full sm:w-2/3 text-gray-800" id="panelNA">-</div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row border-b border-gray-100 pb-4 gap-1 sm:gap-4">
+                            <div class="w-full sm:w-1/3 font-bold text-primary">Tỷ lệ phiếu bầu</div>
+                            <div class="w-full sm:w-2/3 text-gray-800" id="panelVote">-</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Mobile Overlay -->
+            <div id="panelOverlay" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
         </div>
 
     </main>
@@ -957,7 +996,7 @@
             data.forEach((delegate, index) => {
                 const card = document.createElement('div');
                 card.className = 'delegate-card group cursor-pointer flex flex-row sm:flex-col border border-gray-100 rounded-2xl hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 bg-white relative z-0 hover:z-10 overflow-hidden';
-                card.onclick = () => openModal(delegate);
+                card.onclick = () => openPanel(delegate);
                 
                 const name = delegate['Họ và tên'] || 'Chưa cập nhật';
                 const position = delegate['Nghề nghiệp, chức vụ'] || 'Đại biểu Quốc hội';
@@ -1408,9 +1447,16 @@
         if (desktopCopyBtn) desktopCopyBtn.addEventListener('click', handleCopyLink);
         facebookBtns.forEach(btn => btn.addEventListener('click', handleFacebookShare));
 
-        // Modal Logic
-        function openModal(delegate) {
-            const modalAvatarContainer = document.getElementById('modalAvatarContainer');
+        const detailPanel = document.getElementById('detailPanel');
+        const panelOverlay = document.getElementById('panelOverlay');
+        const closePanelBtn = document.getElementById('closePanelBtn');
+        const panelCopyBtn = document.getElementById('panelCopyBtn');
+
+        if (panelCopyBtn) panelCopyBtn.addEventListener('click', handleCopyLink);
+
+        // Panel Logic
+        function openPanel(delegate) {
+            const panelAvatarContainer = document.getElementById('panelAvatarContainer');
             const name = delegate['Họ và tên'];
             const gender = delegate['Giới tính'];
             let avatarUrl = '';
@@ -1445,75 +1491,61 @@
                 }
             };
 
-            // Desktop Avatar (Larger: w-32 h-32)
-            modalAvatarContainer.innerHTML = getAvatarHtml('w-24 h-24 sm:w-32 sm:h-32', 'text-4xl sm:text-6xl');
+            panelAvatarContainer.innerHTML = getAvatarHtml('w-full h-full', 'text-4xl sm:text-5xl');
             
-            // Mobile Avatar (Visible in body)
-            modalAvatarMobile.innerHTML = getAvatarHtml('w-24 h-24', 'text-4xl');
-            modalNameMobile.textContent = name;
-            modalPositionMobile.textContent = delegate['Nghề nghiệp, chức vụ'] || 'Đại biểu Quốc hội';
-
-            document.getElementById('modalName').textContent = name;
-            document.getElementById('modalPosition').textContent = delegate['Nghề nghiệp, chức vụ'] || 'Đại biểu Quốc hội';
-            
-            document.getElementById('modalDob').textContent = delegate['Ngày tháng năm sinh'] || 'Không rõ';
-            document.getElementById('modalGender').textContent = delegate['Giới tính'] || 'Không rõ';
+            document.getElementById('panelName').textContent = name;
+            document.getElementById('panelPosition').textContent = delegate['Nghề nghiệp, chức vụ'] || 'Đại biểu Quốc hội';
+            document.getElementById('panelDob').textContent = delegate['Ngày tháng năm sinh'] || 'Không rõ';
             
             const ethnicity = delegate['Dân tộc'] || '';
             const religion = delegate['Tôn giáo'] || '';
-            document.getElementById('modalEthnicity').textContent = [ethnicity, religion].filter(Boolean).join(' / ') || 'Không rõ';
+            document.getElementById('panelEthnicity').textContent = [ethnicity, religion].filter(Boolean).join(' / ') || 'Không rõ';
             
-            // Use 'Quê' column for modal as well if requested, or keep 'Quê quán' full text?
-            // User said "Quê quán lấy theo cột dữ liệu 'Quê' tại file google sheet" in context of "Hãy tối ưu như sau... 1/ Quê quán...".
-            // Usually modal shows full details. Let's keep 'Quê quán' for full detail as it is more descriptive, 
-            // but if 'Quê quán' is empty, fallback to 'Quê'.
-            document.getElementById('modalHometown').textContent = delegate['Quê quán'] || delegate['Quê'] || 'Không rõ';
+            document.getElementById('panelHometown').textContent = delegate['Quê quán'] || delegate['Quê'] || 'Không rõ';
             
-            document.getElementById('modalEdu').textContent = delegate['Giáo dục phổ thông'] || 'Không rõ';
-            document.getElementById('modalDegree').textContent = delegate['Học hàm, học vị'] || 'Không rõ';
-            document.getElementById('modalMajor').textContent = delegate['Chuyên môn, nghiệp vụ'] || 'Không rõ';
-            document.getElementById('modalPolitical').textContent = delegate['Lý luận chính trị'] || 'Không rõ';
+            document.getElementById('panelDetailPosition').textContent = delegate['Nghề nghiệp, chức vụ'] || 'Đại biểu Quốc hội';
             
-            document.getElementById('modalWorkplace').textContent = delegate['Nơi công tác'] || 'Không rõ';
-            document.getElementById('modalProvince').textContent = delegate['Quê'] !== 'Không' ? delegate['Quê'] : 'Trung ương';
-            document.getElementById('modalPartyDate').textContent = delegate['Ngày vào Đảng'] || 'Không rõ';
-            document.getElementById('modalNA').textContent = delegate['Đại biểu QH (nếu có)'] || 'Lần đầu';
+            const edu = [delegate['Giáo dục phổ thông'], delegate['Học hàm, học vị'], delegate['Chuyên môn, nghiệp vụ']].filter(Boolean).join('; ');
+            document.getElementById('panelEdu').textContent = edu || 'Không rõ';
             
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Trigger reflow
-            void modal.offsetWidth;
-            modal.classList.remove('opacity-0');
-            modalContent.classList.remove('scale-95');
+            document.getElementById('panelWorkplace').textContent = delegate['Nơi ứng cử'] || delegate['Nơi công tác'] || 'Không rõ';
+            document.getElementById('panelNA').textContent = delegate['Đại biểu QH (nếu có)'] || delegate['Là đại biểu QH'] || 'Lần đầu';
+            document.getElementById('panelVote').textContent = delegate['Tỷ lệ phiếu bầu'] || 'Không rõ';
             
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            // Open Panel
+            if (window.innerWidth >= 1024) { // Desktop
+                detailPanel.classList.remove('lg:w-0', 'lg:opacity-0');
+                detailPanel.classList.add('lg:w-[400px]', 'xl:w-[450px]', 'lg:opacity-100');
+            } else { // Mobile
+                panelOverlay.classList.remove('hidden');
+                // Trigger reflow
+                void panelOverlay.offsetWidth;
+                panelOverlay.classList.remove('opacity-0');
+                detailPanel.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modalContent.classList.add('scale-95');
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = '';
-            }, 300);
+        function closePanel() {
+            if (window.innerWidth >= 1024) { // Desktop
+                detailPanel.classList.remove('lg:w-[400px]', 'xl:w-[450px]', 'lg:opacity-100');
+                detailPanel.classList.add('lg:w-0', 'lg:opacity-0');
+            } else { // Mobile
+                detailPanel.classList.add('translate-x-full');
+                panelOverlay.classList.add('opacity-0');
+                setTimeout(() => {
+                    panelOverlay.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }, 300);
+            }
         }
 
-        closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+        if (closePanelBtn) closePanelBtn.addEventListener('click', closePanel);
+        if (panelOverlay) panelOverlay.addEventListener('click', closePanel);
         
-        // Close modal on outside click
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
-
-        // Close modal on ESC key
+        // Close panel on escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-                closeModal();
-            }
+            if (e.key === 'Escape') closePanel();
         });
 
         // Start app
